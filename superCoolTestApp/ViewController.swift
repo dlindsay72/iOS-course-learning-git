@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var coolButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +23,10 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func makeItCool(sender: AnyObject) {
+        view.backgroundColor = UIColor.blueColor()
+        coolButton.backgroundColor = UIColor.greenColor()
+        coolButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+    }
 }
 
